@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Coin : MonoBehaviour
-{
+{  
+    //Säger att det objekt som har detta scriptet lägger till ett poäng.
     public int score = 1;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,8 +28,10 @@ public class Coin : MonoBehaviour
             }
             else
             {
+                //Om GameController inte finns skickas en error och den måste vara på och den kan inte bli bort taggen.
                 Debug.LogError("GameController finns inte");
             }
+            //Förstör objecktet efter att alla andra sak ovanför har hänt.
             Destroy(gameObject);
         }
     }

@@ -12,6 +12,7 @@ public class EnemyHorizontalMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //När de objekt med detta scriptet kolliderar med objekt med taggen EndPlatform bytter det håll de rör sig åt.
         if (collision.tag == "EndPlatform")
         {
             if (isleft == true)
@@ -35,6 +36,7 @@ public class EnemyHorizontalMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Gör så att den alltid rör på sig genom att den är i update så körs den så ofta som möjligt.
         if (isleft == true)
         {
             rbody.velocity = new Vector2(-moveSpeed, rbody.velocity.y);
@@ -44,9 +46,11 @@ public class EnemyHorizontalMovement : MonoBehaviour
             rbody.velocity = new Vector2(moveSpeed, rbody.velocity.y);
         }
 
+
     }
     void Move(bool flip)
     {
+        //Annat sätt att göra så att den bytter håll.
         if (isleft == true)
         {
             rbody.velocity = new Vector2(-moveSpeed, rbody.velocity.y);
@@ -58,5 +62,4 @@ public class EnemyHorizontalMovement : MonoBehaviour
             transform.localScale = new Vector3(-1, 1, 1);
         }
     }
-}        // Annat sätt att göra det transform.localScale = new Vector3(movespeed, rbody.velocity.y
-
+}        
