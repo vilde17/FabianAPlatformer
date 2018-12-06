@@ -15,6 +15,7 @@ public class EnemyHorizontalMovement : MonoBehaviour
         //När de objekt med detta scriptet kolliderar med objekt med taggen EndPlatform bytter det håll de rör sig åt.
         if (collision.tag == "EndPlatform")
         {
+            //När isleft är true sätts den till false och byter håll om den inte är true så andras den till true och byter till det andra hållet när man träffar ett objekt med EndPlatform.
             if (isleft == true)
             {
                 isleft = false;
@@ -30,6 +31,7 @@ public class EnemyHorizontalMovement : MonoBehaviour
 
     void Start()
     {
+        //Lägger till rigidbody på objektet.
         rbody = GetComponent<Rigidbody2D>();
     }
 

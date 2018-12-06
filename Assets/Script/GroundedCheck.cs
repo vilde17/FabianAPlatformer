@@ -10,8 +10,8 @@ public class GroundedCheck : MonoBehaviour
     {
         Touches++;
     }
-    //Säger att vi inte collider med marken
     private void OnTriggerExit2D(Collider2D collision)
+    //Säger att vi inte collider med marken
     {
         Touches--;
     }

@@ -6,7 +6,7 @@ public class Coin : MonoBehaviour
 {  
     //Säger att det objekt som har detta scriptet lägger till ett poäng.
     public int score = 1;
-
+    //Har en private void som bara går att ändras i unity och en OnTriggerEnter2D som betyder att det som ska hända bara händer när man rör den.
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
