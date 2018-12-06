@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114793474117543864}
   m_Layer: 0
   m_Name: spritesheet_tiles_58
-  m_TagString: Untagged
+  m_TagString: LockedDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
